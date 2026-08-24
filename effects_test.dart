@@ -7,7 +7,10 @@ void main() {
   test('Phase 7 adds effects and caption animation to scenes', () async {
     final result = await const AiAdBrain().generate(
       const ProductInput(name: 'Smart Watch', description: 'Fitness smartwatch'),
-      const AdBrief(),
+      const AdBrief(
+  productName: 'Smart Watch',
+  audience: 'vijana',
+),
     );
     final project = const AutomaticSceneBuilder().build(result);
 
