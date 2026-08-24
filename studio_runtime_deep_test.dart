@@ -1,7 +1,8 @@
 import 'dart:io';
+
 import 'package:test/test.dart';
-import '../lib/studio_runtime.dart';
-import '../lib/scene_builder.dart';
+import 'package:asazu_studio/studio_runtime.dart';
+import 'package:asazu_studio/scene_builder.dart';
 
 void main() {
   test('project ids that sanitize similarly do not collide', () async {
