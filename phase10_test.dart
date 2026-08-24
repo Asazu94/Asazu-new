@@ -35,7 +35,7 @@ void main() {
     final output = '${temp.path}/ad.mp4';
     final pipeline = OneClickAiAd(
       tts: TtsService(provider: tts),
-      renderer: const FakeRenderer(),
+      renderer: FakeRenderer(),
     );
     final result = await pipeline.generate(OneClickAdInput(
       product: const ProductInput(
