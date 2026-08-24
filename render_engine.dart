@@ -249,7 +249,7 @@ class FfmpegRenderEngine implements RenderEngine {
 
     final voiceExists = voice?.source != null && (_isRemoteSource(voice!.source!) || File(voice.source!).existsSync());
     if (voiceExists) {
-      args.addAll(['-i', voice!.source!]);
+      args.addAll(['-i', voice.source]);
     } else {
       // Every scene gets an audio stream so concat can safely stream-copy all
       // scene files even when a TTS provider is unavailable.
