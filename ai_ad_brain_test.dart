@@ -12,7 +12,10 @@ void main() {
         features: ['Calls & notifications', 'Sport tracking', 'Stylish design'],
         targetAudience: 'vijana',
       ),
-      const AdBrief(productName: 'Smart Watch X1'),
+      const AdBrief(
+  productName: 'Smart Watch X1',
+  audience: 'vijana',
+),
     );
 
     expect(result.script.hook, isNotEmpty);
