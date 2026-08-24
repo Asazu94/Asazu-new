@@ -1,7 +1,6 @@
 import 'dart:async';
 
 import 'package:test/test.dart';
-import '../lib/platform_optimization.dart';
 import '../lib/render_engine.dart';
 import '../lib/render_queue.dart';
 import '../lib/scene_builder.dart';
