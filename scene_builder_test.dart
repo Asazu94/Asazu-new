@@ -12,7 +12,10 @@ void main() {
         features: ['Calls', 'Sport tracking'],
         targetAudience: 'vijana',
       ),
-      const AdBrief(productName: 'Smart Watch X1'),
+      const AdBrief(
+  productName: 'Smart Watch X1',
+  audience: 'vijana',
+),
     );
 
     final project = const AutomaticSceneBuilder().build(result);
