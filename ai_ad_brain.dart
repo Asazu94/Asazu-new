@@ -150,6 +150,7 @@ class LocalAdProvider implements AiAdProvider {
 }
 
 class AdSceneBuilder {
+  const AdSceneBuilder();
   List<AdSceneInstruction> build(AdScript script) {
     final scenes = <AdSceneInstruction>[];
     var index = 1;
