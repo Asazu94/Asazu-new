@@ -7,6 +7,8 @@ import 'phase14_providers.dart';
 import 'ai_ad_brain.dart';
 import 'voice.dart';
 import 'scene_builder.dart';
+import 'render_engine.dart';
+import 'import_export.dart';
 
 /// Phase 12: production runtime integration layer.
 /// Keeps UI/platform code separate from the existing AI/render pipeline.
