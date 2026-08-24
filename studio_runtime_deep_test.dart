@@ -22,8 +22,26 @@ void main() {
     final root = await Directory.systemTemp.createTemp('asazu-runtime-');
     final config = StudioConfig(workspace: root);
     final store = StudioProjectStore(config: config);
-    final first = SceneProject(id: 'demo', title: 'old', width: 720, height: 1280, fps: 30, scenes: const []);
-    final second = SceneProject(id: 'demo', title: 'new', width: 720, height: 1280, fps: 30, scenes: const []);
+
+    final first = const SceneProject(
+  id: 'demo',
+  title: 'old',
+  width: 720,
+  height: 1280,
+  fps: 30,
+  scenes: [],
+);
+
+final second = const SceneProject(
+  id: 'demo',
+  title: 'new',
+  width: 720,
+  height: 1280,
+  fps: 30,
+  scenes: [],
+);
+    
+  
     await store.save(first, createBackup: false);
     await store.save(second, createBackup: true);
     final backups = config.backups.listSync().whereType<File>().toList();
