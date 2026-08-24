@@ -6,6 +6,7 @@ import 'package:path_provider/path_provider.dart';
 import 'studio_runtime.dart';
 import 'one_click_ai_ad.dart';
 import 'render_engine.dart';
+import 'ai_ad_brain.dart';
 
 void main() => runApp(const AsazuStudioApp());
 
