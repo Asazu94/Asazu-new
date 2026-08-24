@@ -130,7 +130,7 @@ class _StudioHomePageState extends State<StudioHomePage> {
     _field(name, 'Product name', Icons.shopping_bag), _field(description, 'Description', Icons.description, max: 3),
     _field(price, 'Price', Icons.payments), _field(features, 'Benefits (comma separated)', Icons.stars),
     _field(audience, 'Target audience', Icons.people), _field(brand, 'Brand name', Icons.store),
-    DropdownButtonFormField<RenderPreset>(value: preset, decoration: const InputDecoration(labelText: 'Format'), items: RenderPreset.values.map((p) => DropdownMenuItem(value: p, child: Text(p.name))).toList(), onChanged: (v) => setState(() => preset = v ?? preset)),
+    DropdownButtonFormField<RenderPreset>(initialValue: preset, decoration: const InputDecoration(labelText: 'Format'), items: RenderPreset.values.map((p) => DropdownMenuItem(value: p, child: Text(p.name))).toList(), onChanged: (v) => setState(() => preset = v ?? preset)),
     const SizedBox(height: 20),
     FilledButton.icon(onPressed: status == StudioStatus.preparing || status == StudioStatus.generating || status == StudioStatus.rendering ? null : generate, icon: const Icon(Icons.auto_awesome), label: const Text('GENERATE AI AD')),
     const SizedBox(height: 16), LinearProgressIndicator(value: progress == 0 ? null : progress), const SizedBox(height: 8), Text(message),
