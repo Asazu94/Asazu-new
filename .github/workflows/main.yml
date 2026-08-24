@@ -20,6 +20,22 @@ jobs:
           channel: stable
           cache: true
 
+      - name: Fix Flutter project structure
+        run: |
+          mkdir -p lib test
+
+          for f in *.dart; do
+            if [[ "$f" != *_test.dart ]]; then
+              mv "$f" lib/
+            fi
+          done
+
+          for f in *_test.dart; do
+            if [ -f "$f" ]; then
+              mv "$f" test/
+            fi
+          done
+
       - name: Get dependencies
         run: flutter pub get
 
